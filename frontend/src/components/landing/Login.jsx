@@ -50,9 +50,9 @@ export default function Login() {
         alert("Login successful!");
         
         // Redirect based on role
-        if (role === "User") navigate("/home");
-        else if (role === "Instructor") navigate("/instructor");
-        else if (role === "Admin") navigate("/admin");
+        if (role === "User") {navigate("/home"); window.location.reload();}
+        else if (role === "Instructor") {navigate("/instructor");window.location.reload();}
+        else if (role === "Admin") {navigate("/admin"); window.location.reload();}
       }
     } catch (error) {
       console.error("Login Error:", error.response?.data || error.message);

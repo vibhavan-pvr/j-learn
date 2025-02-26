@@ -18,16 +18,7 @@ const Sidebar = ({ activeTab, setActiveTab, handleLogout, selectedCourse }) => {
               {tab}
             </li>
           ))}
-          {selectedCourse && (
-            <li
-              className={`p-3 rounded-md cursor-pointer transition duration-150 ${
-                activeTab === "CourseDetails" ? "bg-blue-600" : "hover:bg-gray-700"
-              }`}
-              onClick={() => setActiveTab("CourseDetails")}
-            >
-              Course Details
-            </li>
-          )}
+          
           <li 
             className="p-3 rounded-md cursor-pointer text-red-400 hover:bg-red-800 hover:text-white transition duration-150 mt-8"
             onClick={handleLogout}
