@@ -18,11 +18,6 @@ const Profile = ({ instructor }) => {
           <div className="w-32 font-medium text-gray-500">Courses:</div>
           <div className="flex-1 text-gray-800">{instructor.addedCourses ? instructor.addedCourses.length : 0}</div>
         </div>
-        <div className="border-t border-gray-200 pt-4 mt-4">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-150">
-            Edit Profile
-          </button>
-        </div>
       </div>
     </div>
   );

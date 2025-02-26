@@ -37,8 +37,8 @@ const AddCourse = ({ addCourse, instructor }) => {
         console.log("Course data successfully posted", response.data);
       if(response.status == 200) {
       Swal.fire({
-               title: "Start Learning!",
-               text: "Successfully Added to the Course!",
+               title: "course enrolled",
+               text: "course succesfully enrolled!",
                icon: "success",
              });
 
