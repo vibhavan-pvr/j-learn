@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 // User components
 import Landing from "./components/landing/Landing";
 import Home from "./components/user/Home";
-import Dashboard from "./components/user/InstructorDashboard";
+import Dashboard from "./components/user/UserDashboard";
 import ShowCourse from "./components/user/ShowCourse";
 import CourseDetails from "./components/user/CourseDetails";
 import NoPage from "./components/landing/NoPage";

@@ -10,6 +10,16 @@ import Header from "./Header";
 
 export default function Home() {
 
+  useEffect(() => {
+      // Check if the page has already been refreshed during this session
+      if (!sessionStorage.getItem('refreshed')) {
+        // Set the 'refreshed' flag to true in sessionStorage
+        sessionStorage.setItem('refreshed', 'true');
+        // Reload the page
+        window.location.reload();
+      }
+    }, []);
+
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
   const navigate = useNavigate();
 
