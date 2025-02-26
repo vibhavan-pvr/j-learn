@@ -31,7 +31,7 @@ const UserLayout = ({ children }) => (
 function App() {
   // Get the user's role from localStorage
   const userRole = localStorage.getItem('userRole');
-  
+
   return (
     <BrowserRouter>
       <Routes>
@@ -39,7 +39,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Landing />} />
-        
+
         {/* User routes */}
         {(userRole === 'User' || !userRole) && (
           <>
@@ -66,7 +66,7 @@ function App() {
             } />
           </>
         )}
-        
+
         {/* Admin routes */}
         {(userRole === 'Admin' || !userRole) && (
           <>
@@ -84,22 +84,22 @@ function App() {
             } />
           </>
         )}
-        
+
         {/* Instructor routes */}
         {(userRole === 'Instructor' || !userRole) && (
-  <>
-    <Route path="/instructor" element={
-      <ProtectedRoute element={<InstructorDashboard />} requiredRole="Instructor" />
-    } />
-  </>
-)}
-        
+          <>
+            <Route path="/instructor" element={
+              <ProtectedRoute element={<InstructorDashboard />} requiredRole="Instructor" />
+            } />
+          </>
+        )}
+
         {/* Handle 404 and redirects */}
         <Route path="*" element={
           userRole === 'User' ? <UserLayout></UserLayout> :
-          userRole === 'Admin' ? <Navigate to="/admin" /> :
-          userRole === 'Instructor' ? <Navigate to="/instructor" /> :
-          <Navigate to="/login" />
+            userRole === 'Admin' ? <Navigate to="/admin" /> :
+              userRole === 'Instructor' ? <Navigate to="/instructor" /> :
+                <Navigate to="/login" />
         } />
       </Routes>
     </BrowserRouter>

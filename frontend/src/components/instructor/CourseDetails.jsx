@@ -2,6 +2,7 @@
 import React from "react";
 
 const CourseDetails = ({ selectedCourse, students, setActiveTab }) => {
+  console.log(students.students)
   return (
     <div>
       <div className="flex items-center mb-6">

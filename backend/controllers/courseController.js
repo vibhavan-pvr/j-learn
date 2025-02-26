@@ -13,10 +13,8 @@ exports.getAllCourses = async (req, res) => {
 
 // Add a New Course (Instructor Only)
 exports.addCourse = async (req, res) => {
-  console.log(req.body)
   try {
     const { title, description, instructor,instructor_id, rating, reviewCount, duration, lectures, level, content } = req.body;
-    console.log(req.body.data)
 
     // Check if instructor exists
     const instructorData = await Instructor.findById(instructor_id);
